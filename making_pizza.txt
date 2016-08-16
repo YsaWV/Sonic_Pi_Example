@@ -1,0 +1,51 @@
+#How to make froven pizza
+def buy_pizza(type,thickness,n)
+  sample(type,rate: thickness) #wear
+  sleep(n)
+end
+def turn_on_oven(temp,time,n)
+  sample(temp, rate: time) #wash
+  sleep(n)
+end
+def unwrap_pizza(time,n)
+  sample(time, rate:n)
+  sleep(n)
+end
+
+def place_pizza_in_oven(time,n)
+  sample(time, amp:n) #dry
+  sleep(n)
+end
+
+def baking(btime,n)
+  sample(btime, amp:n)
+  sleep(n)
+end
+def set_up_table(plates,silverware,n)
+  sample(plates, amp:n)
+  sample(silverware,rate:n)
+  sleep(n)
+end
+def eat_pizza(happy,unhappy,n)
+  taste = ["yummy","burned"].choose
+  if (taste == "yummy")
+    sample(happy, amp:1, attack:2)
+    print "YEAAAA!"
+  else
+    sample(unhappy)
+    print ("Call Dominos")
+  end
+  sleep(n)
+end
+5.times do
+  print "Hello World!"
+  buy_pizza(:tabla_dhec,5,2)
+  turn_on_oven(:guit_em9,5,2)
+  unwrap_pizza(:ambi_choir,2)
+  place_pizza_in_oven(:drum_splash_soft,2)
+  baking(:drum_splash_hard,3)
+  set_up_table(:ambi_swoosh,:ambi_lunar_land,2)
+  eat_pizza(:guit_e_slide, :drum_cowbell, 2)
+end
+
+
