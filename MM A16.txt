@@ -1,0 +1,34 @@
+def wear(days,smell,n)
+  sample(days,rate: smell) #wear
+  sleep(n/smell)
+end
+def wash(temp,n)
+  play(temp) #wash
+  sleep(n)
+end
+def dry(time,n)
+  sample(time) #dry
+  sleep(n)
+end
+
+
+2.times do
+  print "how many days you wore it "
+  #days = gets.chomp
+  wear(60,5,2)
+  stain = [true,false].choose
+  if stain == true
+    sample(:ambi_dark_woosh)
+    sleep 1
+  else
+    sample(:tabla_te2)
+    sleep 1
+  end
+  wash(60,2)
+  dry(70,2)
+  
+end
+#1.times do
+# wear(:bass_drop_c,5,2)
+#wash(75,4)
+#dry(:ambi_choir,2)
